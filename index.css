@@ -253,21 +253,29 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     width: 100%;
     height: 100%;
 }
 
+.container .card .section #beranda .hero-caption,
+.container .card .section #beranda .hero-text {
+    display: block;
+    text-align: center;
+}
+
+.container .card .section #beranda .hero-caption::after {
+    font-size: 2.5rem;
+    content: "";
+    animation: textChange 6s linear;
+}
+
 .container .card .section #beranda .hero-text {
     font-size: 3rem;
+    animation: zoom 1.5s alternate-reverse infinite;
+    animation-delay: 6s;
+    color: var(--light);
     font-weight: bold;
-    color: var(--dark);
-    overflow: hidden;
-    white-space: nowrap;
-    margin: 0 auto;
-    letter-spacing: 0.5rem;
-    border-right: 0.5rem solid var(--secondary);
-    animation: typing 3.5s steps(40, end),
-                blink-caret .75s step-end infinite;
 }
 
 .container .card .section #kontak {
@@ -581,17 +589,43 @@ body {
     transform: scale(1.3);
 }
 
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+@keyframes textChange {
+    0% {
+        content: "Welcome to";
+        color: var(--dark);
+    }
+    33% {
+        content: "My Website";
+        color: var(--primary);
+    }
+    66% {
+        content: "It's All About";
+    }
+    100% {
+        content: "Coding </>";
+        color: var(--secondary);
+    }
 }
 
+@keyframes zoom {
+    0% {
+        content: "RUSLAN SAMUEL";
+        scale: 1.5;
+        color: var(--dark);
+    }
+}
+
+/* The typing effect */
+/* @keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+} */
+
 /* The typewriter cursor effect */
-@keyframes blink-caret {
+/* @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: var(--secondary); }
-}
+} */
 
 /* Tablet */
 @media (max-width: 768px){
