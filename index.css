@@ -1,0 +1,833 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+:root {
+    --primary: #654321;
+    --secondary: #765432;
+    --dark: #543210;
+    --light: #f0f8ff;
+    --grey: #aaaaaa;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--secondary);
+    opacity: 0.5; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: var(--secondary);
+    opacity: 0.5; /* Firefox */
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: var(--secondary);
+    opacity: 0.5; /* Firefox */
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.mx-auto {
+    margin: 0 auto;
+}
+
+.p-absolute {
+    position: absolute;
+}
+
+.p-relative {
+    position: relative;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.fw-bold {
+    font-weight: bold;
+}
+
+.d-block {
+    display: block;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-muted {
+    color: #a5aaaf;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.container .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+    padding: 1rem;
+}
+
+.container .card .profil {
+    width: fit-content;
+    height: 95%;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 1rem 0 0 1rem;
+    background-color: var(--dark);
+    color: var(--light);
+    box-shadow: 0px 0px 10px 2px var(--light);
+    transition: 0.3s ease-in-out;
+}
+
+.container .card .profil .profil-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 6px var(--secondary),
+                0px 0px 12px 6px var(--light);
+    transition: 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.container .card .profil .profil-img:hover {
+    box-shadow: 0px 0px 0px 6px var(--secondary),
+                0px 0px 12px 8px var(--grey);
+}
+
+.container .card .profil .profil-img img {
+    width: 100%;
+}
+
+.container .card .profil .profil-title {
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    margin: 0 1.2rem;
+}
+
+.container .card .profil .profil-name {
+    font-size: 1.4rem;
+    font-weight: bold;
+    display: block;
+    color: var(--light);
+    transition: 0.3s ease-in-out;
+}
+
+.container .card .profil .profil-name:hover {
+    color: var(--grey);
+}
+
+.container .card .profil .profil-text {
+    font-size: 0.83rem;
+    margin: 0.5rem auto;
+    transition: 0.3s ease-in-out;
+}
+
+.container .card .profil .profil-sosial {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    font-size: 1.2rem;
+    margin: 0.5rem auto;
+}
+
+.container .card .profil .profil-sosial .link-sosial {
+    font-size: 1.5rem;
+    color: var(--light);
+    transition: 0.3s ease-in-out;
+}
+
+.container .card .profil .profil-sosial .link-sosial:hover {
+    color: var(--grey);
+    transform: scale(1.3);
+}
+
+.container .card .profil .profil-cta {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.8rem 2rem;
+    border-radius: 5rem;
+    background-color: var(--secondary);
+    color: var(--light);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 0px 10px 1px var(--light);
+}
+
+.container .card .profil .profil-cta .tooltiptext {
+    display: none;
+    transition: 0.3s ease-in-out;
+}
+
+.container .card .profil .profil-cta i {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.container .card .profil .profil-cta span {
+    display: inline-block;
+}
+
+.container .card .profil .profil-cta:hover {
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: var(--dark);
+    color: var(--grey);
+    box-shadow: 0px 0px 10px 1px var(--grey);
+}
+
+.container .card .section {
+    background-color: var(--light);
+    width: 75%;
+    height: 100%;
+    border-radius: 1rem;
+    padding: 0.5rem 0.8rem;
+    overflow: scroll;
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.5);
+    border: 0.5rem solid var(--light);
+    transition: 0.3s ease-in-out;
+}
+
+.container .card .section #beranda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.container .card .section #beranda .hero-text {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--dark);
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.5rem;
+    border-right: 0.5rem solid var(--secondary);
+    animation: typing 3.5s steps(40, end),
+                blink-caret .75s step-end infinite;
+}
+
+.container .card .section #kontak {
+    width: 100%;
+    height: 100%;
+}
+
+.container .card .section #tentang .section-title,
+.container .card .section #pendidikan .section-title,
+.container .card .section #lokasi .section-title,
+.container .card .section #kontak .section-title {
+    width: 100%;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    color: var(--dark);
+}
+
+.container .card .section #tentang .section-text,
+.container .card .section #pendidikan .section-text,
+.container .card .section #lokasi .section-text,
+.container .card .section #kontak .section-text {
+    width: 75%;
+    font-size: 1rem;
+    text-align: center;
+    margin: 1rem auto 0;
+    color: var(--secondary);
+    font-weight: bold;
+    display: block;
+}
+
+.container .card .section #tentang .row,
+.container .card .section #pendidikan .row,
+.container .card .section #lokasi .row {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    gap: 2rem;
+    padding: 1rem 2rem 0;
+    margin-top: 1rem;
+}
+
+.container .card .section #tentang .row .column,
+.container .card .section #pendidikan .row .column,
+.container .card .section #lokasi .row .column {
+    width: 50%;
+}
+
+.container .card .section #tentang,
+.container .card .section #pendidikan,
+.container .card .section #lokasi {
+    width: 100%;
+    margin-bottom: 10rem;
+}
+
+.container .card .section #tentang .row .column .section-subtitle,
+.container .card .section #pendidikan .row .column .section-subtitle {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--dark);
+}
+
+.container .card .section #tentang .row .column .section-item.skill {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.7rem;
+}
+
+.container .card .section #tentang .row .column .section-item.skill .badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary);
+    padding: 0.5rem 1rem;
+    border-radius: 5rem;
+    color: var(--light);
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.container .card .section #tentang .row .column .section-item.skill .badge:hover {
+    background-color: var(--dark);
+    box-shadow: 0px 0px 0px 3px var(--secondary);
+}
+
+.container .card .section #tentang .row .column .section-item.kerja,
+.container .card .section #pendidikan .row .column .section-item.formal,
+.container .card .section #pendidikan .row .column .section-item.nonformal {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.container .card .section #tentang .row .column .section-item.kerja .list-kerja,
+.container .card .section #pendidikan .row .column .section-item.formal .list-pendidikan,
+.container .card .section #pendidikan .row .column .section-item.nonformal .list-pendidikan {
+    font-size: 0.8rem;
+    transition: 0.3s ease-in-out;
+}
+
+.container .card .section #tentang .row .column .section-item.kerja .list-kerja .waktu,
+.container .card .section #pendidikan .row .column .section-item.formal .list-pendidikan .waktu,
+.container .card .section #pendidikan .row .column .section-item.nonformal .list-pendidikan .waktu {
+    text-align: center;
+    background-color: var(--secondary);
+    padding: 0.3rem 0.7rem;
+    border-radius: 5rem;
+    color: var(--light);
+    font-size: 0.6rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.container .card .section #tentang .row .column .section-item.kerja .list-kerja .waktu:hover,
+.container .card .section #pendidikan .row .column .section-item.formal .list-pendidikan .waktu:hover,
+.container .card .section #pendidikan .row .column .section-item.nonformal .list-pendidikan .waktu:hover {
+    background-color: var(--dark);
+    box-shadow: 0px 0px 0px 3px var(--secondary);
+}
+
+.container .card .section #tentang .row .column .section-item.kerja .list-kerja .deskripsi,
+.container .card .section #pendidikan .row .column .section-item.formal .list-pendidikan .deskripsi,
+.container .card .section #pendidikan .row .column .section-item.nonformal .list-pendidikan .deskripsi {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    padding-left: 1rem;
+}
+
+.container .card .section #tentang .row .column .section-item.kerja .list-kerja .deskripsi .jabatan,
+.container .card .section #pendidikan .row .column .section-item.formal .list-pendidikan .deskripsi .sekolah,
+.container .card .section #pendidikan .row .column .section-item.nonformal .list-pendidikan .deskripsi .sekolah {
+    display: block;
+    color: var(--dark);
+    font-weight: bold;
+    border-bottom: 1px solid var(--secondary);
+    word-wrap: break-word;
+    padding: 0 0.3rem;
+}
+
+.container .card .section #tentang .row .column .section-item.kerja .list-kerja .deskripsi .instansi,
+.container .card .section #pendidikan .row .column .section-item.formal .list-pendidikan .deskripsi .instansi,
+.container .card .section #pendidikan .row .column .section-item.nonformal .list-pendidikan .deskripsi .instansi {
+    padding: 0 0.3rem;
+    color: var(--secondary);
+    word-wrap: break-word;
+}
+
+.container .card .section #lokasi .row .column .map {
+    width: 100%;
+    height: 380px;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 8px 1px var(--secondary);
+}
+
+.container .card .section #lokasi .row .column .list-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.container .card .section #lokasi .row .column .list-group .list-group-item .list-title {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--dark);
+}
+
+.container .card .section #lokasi .row .column .list-group .list-group-item .list-title .bi {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-right: 0.7rem;
+}
+
+.container .card .section #lokasi .row .column .list-group .list-group-item .list-text {
+    font-size: 0.9rem;
+    color: var(--dark);
+    display: block;
+}
+
+.container .card .section #kontak .form-contact {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem 2rem 0;
+    margin-top: 1rem;
+}
+
+.container .card .section #kontak .form-contact .row {
+    display: flex;
+    align-content: center;
+    gap: 1.5rem;
+}
+
+.container .card .section #kontak .form-contact .row .column {
+    width: 50%;
+}
+
+.container .card .section #kontak .form-contact .form-group {
+    display: flex;
+    align-items: center;
+    color: var(--dark);
+    border-radius: 5rem;
+    position: relative;
+}
+
+.container .card .section #kontak .form-contact .form-group label {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    left: 1.5rem;
+    font-size: 1.5rem;
+    color: var(--secondary);
+}
+
+.container .card .section #kontak .form-contact .form-group input {
+    width: 100%;
+    background-color: transparent;
+    padding: 1rem 2rem 1rem 3.5rem;
+    border-radius: 5rem;
+    font-size: 1.3rem;
+    color: var(--dark);
+    font-weight: 600;
+    background: none;
+    border: 0.15rem solid var(--secondary);
+    transition: 0.2s ease-in-out;
+}
+
+.container .card .section #kontak .form-contact .form-group input:focus {
+    box-shadow: 0px 0px 8px 1px var(--secondary);
+}
+
+.container .card .section #kontak .form-contact .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary);
+    padding: 1rem;
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    color: var(--light);
+    font-weight: bold;
+    border-radius: 5rem;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.container .card .section #kontak .form-contact .btn:hover {
+    background-color: var(--dark);
+}
+
+.container .card .section #kontak .form-contact .btn i {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.container .sidebar {
+    text-align: center;
+    margin-left: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+    background-color: var(--light);
+    gap: 2rem;
+    border-radius: 5rem;
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.5);
+    transition: 0.3s ease-in-out;
+}
+
+.container .sidebar .sidebar-link {
+    position: relative;
+    display: inline-block;
+    font-size: 1.5rem;
+    color: var(--dark);
+    transition: 0.3s ease-in-out;
+}
+
+.container .sidebar .sidebar-link .tooltiptext {
+    visibility: hidden;
+    white-space: nowrap;
+    background-color: var(--dark);
+    color: var(--light);
+    text-align: center;
+    border-radius: 5rem;
+    padding: 0.4rem 1rem;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    right: 125%;
+    font-size: 1rem;
+    font-weight: 300;
+    box-shadow: 0px 0px 4px 2px var(--secondary);
+}
+
+.container .sidebar .sidebar-link:hover .tooltiptext {
+    visibility: visible;
+}
+
+.container .sidebar .sidebar-link:hover {
+    transform: scale(1.3);
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--secondary); }
+}
+
+/* Tablet */
+@media (max-width: 768px){
+    html {
+        font-size: 65%;
+    }
+
+    .container {
+        width: 100%;
+        height: 100vh;
+        background-color: var(--primary);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .container .card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        border-radius: 1rem;
+        overflow: hidden;
+        padding: 1rem;
+    }
+
+    .container .card .profil {
+        padding: 2rem 0;
+        width: 90%;
+        height: fit-content;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        border-radius: 1rem 1rem 0 0;
+    }
+
+    .container .card .profil .profil-img {
+        width: 75px;
+        height: 75px;
+        margin: 0;
+        box-shadow: 0px 0px 0px 4px var(--secondary),
+                    0px 0px 12px 4px var(--light);
+    }
+
+    .container .card .profil .profil-img:hover {
+        box-shadow: 0px 0px 0px 4px var(--secondary),
+                    0px 0px 12px 6px var(--grey);
+    }
+
+    .container .card .profil .profil-title {
+        text-align: center;
+        margin: 0;
+        transform: scale(1.3);
+    }
+
+    .container .card .profil .profil-cta {
+        margin: 0;
+        padding: 1rem;
+        transition: 0.3s ease-in-out;
+    }
+
+    .container .card .profil .profil-cta:hover {
+        transform: scale(1.1);
+    }
+
+    .container .card .profil .profil-cta .tooltiptext {
+        display: none;
+        white-space: nowrap;
+        background-color: var(--secondary);
+        color: var(--light);
+        text-align: center;
+        border-radius: 5rem;
+        padding: 0.4rem 1rem;
+        position: absolute;
+        z-index: 1;
+        top: -34px;
+        right: 50%;
+        transform: translate(50%);
+        font-size: 1rem;
+        font-weight: 300;
+        box-shadow: 0px 0px 4px 1px var(--light);
+        transition: 0.3s ease-in-out;
+    }
+
+    .container .card .profil .profil-cta:hover .tooltiptext {
+        display: block;
+    }
+
+    .container .card .profil .profil-cta i {
+        margin: 0;
+    }
+
+    .container .card .profil .profil-cta span {
+        display: none;
+    }
+
+    .container .card .section {
+        width: 95%;
+        height: 100%;
+    }
+
+    .container .card .section #beranda .hero-text {
+        font-size: 2rem;
+    }
+
+    .container .card .section #tentang .section-text,
+    .container .card .section #pendidikan .section-text,
+    .container .card .section #lokasi .section-text,
+    .container .card .section #kontak .section-text {
+        width: 100%;
+    }
+
+    .container .card .section #tentang .row,
+    .container .card .section #pendidikan .row,
+    .container .card .section #lokasi .row {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-content: center;
+        gap: 2rem;
+    }
+
+    .container .card .section #tentang .row .column,
+    .container .card .section #pendidikan .row .column,
+    .container .card .section #lokasi .row .column {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .container .card .section #tentang .row .column .section-subtitle,
+    .container .card .section #pendidikan .row .column .section-subtitle {
+        text-align: center;
+    }
+
+    .container .card .section #tentang .row .column .section-item.skill {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 0.7rem;
+    }
+
+    .container .card .section #tentang .row .column .section-item.skill .badge:hover {
+        background-color: var(--dark);
+        box-shadow: 0px 0px 0px 2px var(--secondary);
+    }
+
+    .container .card .section #tentang .row .column .section-item.kerja .list-kerja,
+    .container .card .section #pendidikan .row .column .section-item.formal .list-pendidikan,
+    .container .card .section #pendidikan .row .column .section-item.nonformal .list-pendidikan {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+        border: 1px solid var(--secondary);
+        width: fit-content;
+        padding: 0.5rem 0 0.5rem 1rem;
+        margin: 0  auto;
+        border-radius: 5rem;
+    }
+
+    .container .card .section #tentang .row .column .section-item.kerja .list-kerja .waktu:hover,
+    .container .card .section #pendidikan .row .column .section-item.formal .list-pendidikan .waktu:hover,
+    .container .card .section #pendidikan .row .column .section-item.nonformal .list-pendidikan .waktu:hover {
+        background-color: var(--dark);
+        box-shadow: 0px 0px 0px 2px var(--secondary);
+    }
+
+    .container .card .section #tentang .row .column .section-item.kerja .list-kerja .deskripsi,
+    .container .card .section #pendidikan .row .column .section-item.formal .list-pendidikan .deskripsi,
+    .container .card .section #pendidikan .row .column .section-item.nonformal .list-pendidikan .deskripsi {
+        padding: 0;
+        margin: 0;
+    }
+
+    .container .card .section #tentang .row .column .section-item.kerja .list-kerja .deskripsi .jabatan,
+    .container .card .section #pendidikan .row .column .section-item.formal .list-pendidikan .deskripsi .sekolah,
+    .container .card .section #pendidikan .row .column .section-item.nonformal .list-pendidikan .deskripsi .sekolah {
+        padding: 0 2rem 0 0.6rem;
+    }
+
+    .container .card .section #tentang .row .column .section-item.kerja .list-kerja .deskripsi .instansi,
+    .container .card .section #pendidikan .row .column .section-item.formal .list-pendidikan .deskripsi .instansi,
+    .container .card .section #pendidikan .row .column .section-item.nonformal .list-pendidikan .deskripsi .instansi {
+        padding: 0 2rem 0 0.6rem;
+        color: var(--secondary);
+        word-wrap: break-word;
+    }
+
+    .container .card .section #lokasi .section-text {
+        display: none;
+    }
+
+    .container .card .section #lokasi .row {
+        padding: 0;
+        text-align: center;
+    }
+
+    .container .card .section #lokasi .row .column .map {
+        width: 90%;
+        height: 130px;
+        margin: 0 auto;
+    }
+
+    .container .card .section #lokasi .row .column .list-group {
+        gap: 1rem;
+        margin: 0;
+    }
+
+    .container .card .section #lokasi .row .column .list-group .list-group-item .list-title {
+        justify-content: center;
+    }
+
+    .container .card .section #kontak .form-contact {
+        padding: 1rem 0;
+    }
+
+    .container .sidebar {
+        width: 50%;
+        margin-top: 1.5rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+        padding: 1rem 2rem;
+    }
+
+    .container .sidebar .sidebar-link .tooltiptext {
+        top: -2.7rem;
+        right: 50%;
+        transform: translate(50%);
+        /* bottom: 100%;
+        left: 50%; */
+    }
+}

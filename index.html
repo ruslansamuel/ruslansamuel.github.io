@@ -1,0 +1,149 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My App | Landing Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="list-container"></div>
+    <div class="container">
+        <div class="card">
+            <div class="profil">
+                <a href="#beranda" class="profil-img"><img src="assets/images/user.png" alt="Profil Image"></a>
+                <div class="profil-title">
+                    <a href="#beranda" class="profil-name">RUSLAN SAMUEL</a>
+                    <span class="profil-text">ruslansamuel11@gmail.com</span>
+                    <div class="profil-sosial"></div>
+                </div>
+                <a href="assets/documents/pdf/01. CV v2.pdf" target="_blank" class="profil-cta">
+                    <i class="bi bi-download"></i>
+                    <span>Download CV</span>
+                    <span class="tooltiptext">Download CV</span>
+                </a>
+            </div>
+            <div class="section">
+                <section id="beranda">
+                    <h3 class="hero-text">Hello, I am RUSLAN SAMUEL</h3>
+                </section>
+                <section id="tentang">
+                    <h4 class="section-title">Tentang Saya</h4>
+                    <p class="section-text">Perkenalkan Saya Ruslan Dara Samuel, biasa dipanggil Ulan. Saya adalah lulusan SMA Jurusan IPA. Begitu lulus SMA Saya langsung memulai petualangan kerja untuk belajar dan menambah keahlian-keahlian baru. Selain bekerja, Saya terus mengikuti pelatihan-pelatihan baik yang diselenggarakan oleh pemerintah maupun swasta.</p>
+                    <div class="row">
+                        <div class="column">
+                            <h5 class="section-subtitle">Skill</h5>
+                            <div class="section-item skill"></div>
+                        </div>
+                        <div class="column">
+                            <h5 class="section-subtitle">Pengalaman Kerja</h5>
+                            <div class="section-item kerja"></div>
+                        </div>
+                    </div>
+                </section>
+                <section id="pendidikan">
+                    <h4 class="section-title">Pendidikan</h4>
+                    <p class="section-text">Berikut adalah pendidikan yang telah saya tempuh, dari pendidikan formal sampai pendidikan non-formal</p>
+                    <div class="row">
+                        <div class="column">
+                            <h5 class="section-subtitle">Formal</h5>
+                            <div class="section-item formal"></div>
+                        </div>
+                        <div class="column">
+                            <h5 class="section-subtitle">Non Formal</h5>
+                            <div class="section-item nonformal"></div>
+                        </div>
+                    </div>
+                </section>
+                <section id="lokasi">
+                    <h4 class="section-title">Lokasi</h4>
+                    <p class="section-text">Temui saya disini</p>
+                    <div class="row">
+                        <div class="column">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.615664629164!2d123.06255587389163!3d0.5774871635737885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32792dce500b1435%3A0x816714d4d794530c!2sMUTIARA%20GALERI!5e0!3m2!1sid!2sid!4v1685043806778!5m2!1sid!2sid" class="map" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="column">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <span class="list-title"><i class="bi bi-geo-fill"></i>
+                                    Alamat</span>
+                                    <p class="list-text">Jln. Membramo, Kel. Bulotadaa Timur, Kec. Sipatana, Kota Gorontalo, Gorontalo 96124</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="list-title"><i class="bi bi-whatsapp"></i>No. HP / WA</span>
+                                    <p class="list-text">0895708460123</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="list-title"><i class="bi bi-envelope"></i>Email</span>
+                                    <p class="list-text">ruslansamuel11@gmail.com</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="list-title"><i class="bi bi-link-45deg"></i>Website</span>
+                                    <p class="list-text">https://www.mutiaragaleri.io</p>
+                                    <p class="list-text">https://www.ruslansamuelid.wordpress.com</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section id="kontak">
+                    <h4 class="section-title">Kontak Saya</h4>
+                    <p class="section-text">Jika ada kritik dan saran ataupun pertanyaan yang ingin Anda ajukan, silahkan isi formulir dibawah ini.</p>
+                    <form action="#" class="form-contact" method="post">
+                        <div class="form-group">
+                            <label for="nama"><i class="bi bi-person"></i></label>
+                            <input type="text" id="nama" name="nama" placeholder="Nama Lengkap" autocomplete="off">
+                        </div>
+                        <div class="row">
+                            <div class="column">
+                                <div class="form-group">
+                                    <label for="telepon"><i class="bi bi-whatsapp"></i></label>
+                                    <input type="tel" id="telepon" name="telepon" placeholder="No. HP / WA" autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="form-group">
+                                    <label for="email"><i class="bi bi-envelope"></i></label>
+                                    <input type="email" id="email" name="email" placeholder="Email" autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="pesan"><i class="bi bi-pencil"></i></label>
+                            <input type="text" id="pesan" name="pesan" placeholder="Masukan pesan anda..." autocomplete="off">
+                        </div>
+                        <button type="button" class="btn"><i class="bi bi-send"></i>Kirim</button>
+                    </form>
+                </section>
+            </div>
+            <div class="sidebar">
+                <a href="#beranda" class="sidebar-link">
+                    <i class="bi bi-house-fill"></i>
+                    <span class="tooltiptext">Beranda</span>
+                </a>
+                <a href="#tentang" class="sidebar-link">
+                    <i class="bi bi-info-circle-fill"></i>
+                    <span class="tooltiptext">Tentang Saya</span>
+                </a>
+                <a href="#pendidikan" class="sidebar-link">
+                    <i class="bi bi-buildings-fill"></i>
+                    <span class="tooltiptext">Pendidikan</span>
+                </a>
+                <a href="#lokasi" class="sidebar-link">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    <span class="tooltiptext">Lokasi</span>
+                </a>
+                <a href="#kontak" class="sidebar-link">
+                    <i class="bi bi-telephone-forward-fill"></i>
+                    <span class="tooltiptext">Kontak Saya</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="menu.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
