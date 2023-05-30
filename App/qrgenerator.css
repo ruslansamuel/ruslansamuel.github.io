@@ -1,0 +1,66 @@
+.container {
+    margin: 0 auto;
+    position: absolute;
+    width: 480px;
+    padding: 24px;
+    background: lightcyan;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    border: 5px solid rgba(190,190,190,0);
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3),
+                -5px -5px 10px rgba(255,255,255,0.6);
+    flex-direction: column;
+}
+
+.input {
+    background: lightcyan;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 20px;
+    width: 100%;
+    margin-bottom: 20px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: inset 5px 5px 10px rgba(0,0,0,0.3),
+                inset -5px -5px 10px rgba(255,255,255,0.6),
+                5px 5px 10px rgba(0,0,0,0.3),
+                -5px -5px 10px rgba(255,255,255,0.6);
+}
+
+.container button {
+    width: 100%;
+    border-radius: 5px;
+    padding: 12px 20px;
+    border: 0;
+    background: lightcyan;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 2px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3),
+                -5px -5px 10px rgba(255,255,255,0.6);
+}
+
+.container button:hover {
+    box-shadow: inset 5px 5px 10px rgba(0,0,0,0.3),
+                inset -5px -5px 10px rgba(255,255,255,0.6);
+}
+
+.container #qr-image {
+    display: none;
+}
+
+.container #qr-image .error {
+    color: red;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.container #qr-image img {
+    margin-top: 24px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3),
+                -5px -5px 10px rgba(255,255,255,0.6);
+}

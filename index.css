@@ -283,8 +283,17 @@ body {
     height: 100%;
 }
 
+.container .card .section #tentang,
+.container .card .section #pendidikan,
+.container .card .section #aplikasi,
+.container .card .section #lokasi {
+    width: 100%;
+    margin-bottom: 10rem;
+}
+
 .container .card .section #tentang .section-title,
 .container .card .section #pendidikan .section-title,
+.container .card .section #aplikasi .section-title,
 .container .card .section #lokasi .section-title,
 .container .card .section #kontak .section-title {
     width: 100%;
@@ -296,6 +305,7 @@ body {
 
 .container .card .section #tentang .section-text,
 .container .card .section #pendidikan .section-text,
+.container .card .section #aplikasi .section-text,
 .container .card .section #lokasi .section-text,
 .container .card .section #kontak .section-text {
     width: 75%;
@@ -322,13 +332,6 @@ body {
 .container .card .section #pendidikan .row .column,
 .container .card .section #lokasi .row .column {
     width: 50%;
-}
-
-.container .card .section #tentang,
-.container .card .section #pendidikan,
-.container .card .section #lokasi {
-    width: 100%;
-    margin-bottom: 10rem;
 }
 
 .container .card .section #tentang .row .column .section-subtitle,
@@ -425,6 +428,45 @@ body {
     padding: 0 0.3rem;
     color: var(--secondary);
     word-wrap: break-word;
+}
+
+.container .card .section #aplikasi .row {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    gap: 2rem;
+    padding: 1rem 2rem 0;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.container .card .section #aplikasi .row .column {
+    width: 25%;
+}
+
+.container .card .section #aplikasi .row .column .app-card {
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 8px 1px var(--dark);
+}
+
+.container .card .section #aplikasi .row .column .app-card .app-img {
+    width: 100%;
+}
+
+.container .card .section #aplikasi .row .column .app-card .app-name {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.container .card .section #aplikasi .row .column .app-card .app-name:hover {
+    color: var(--secondary);
 }
 
 .container .card .section #lokasi .row .column .map {

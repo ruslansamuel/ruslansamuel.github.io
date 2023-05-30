@@ -4,6 +4,7 @@ var sectionSkill = document.querySelector(".skill");
 var sectionKerja = document.querySelector(".kerja");
 var sectionFormal = document.querySelector(".formal");
 var sectionNonFormal = document.querySelector(".nonformal");
+var sectionAplikasi = document.querySelector("#aplikasi .row");
 
 function renderSosial() {
   let sosial = [
@@ -162,11 +163,87 @@ function renderNonFormal() {
   sectionNonFormal.innerHTML = listNonFormal;
 }
 
+function renderAplikasi() {
+  let aplikasi = [
+    {
+      nama: "Clock & Date",
+      img: "clock.png",
+      link: "app/index.html",
+    },
+    {
+      nama: "Indeks Masa Tubuh",
+      img: "bmi.png",
+      link: "app/bmi.html",
+    },
+    {
+      nama: "Countdown Timer",
+      img: "countdown.png",
+      link: "app/countdown.html",
+    },
+    {
+      nama: "English Dictionary",
+      img: "dictionary.png",
+      link: "app/dictionary.html",
+    },
+    {
+      nama: "Drawing",
+      img: "draw.png",
+      link: "app/draw.html",
+    },
+    {
+      nama: "Key Code Detector",
+      img: "key.png",
+      link: "app/key.html",
+    },
+    {
+      nama: "To Do List",
+      img: "list.png",
+      link: "app/list.html",
+    },
+    {
+      nama: "Music Player",
+      img: "music.png",
+      link: "app/music.html",
+    },
+    {
+      nama: "Password Generator",
+      img: "passwordgenerator.png",
+      link: "app/passwordgenerator.html",
+    },
+    {
+      nama: "QR Code Generator",
+      img: "qrgenerator.png",
+      link: "app/qrgenerator.html",
+    },
+    {
+      nama: "Text To Speech",
+      img: "tts.png",
+      link: "app/tts.html",
+    },
+    {
+      nama: "Weather",
+      img: "weather.png",
+      link: "app/weather.html",
+    },
+  ];
+  let listAplikasi = "";
+  aplikasi.forEach((app) => {
+    listAplikasi += `<div class="column">
+                        <div class="app-card">
+                            <img src="assets/images/project/${app.img}" alt="My Project" class="app-img">
+                            <a href="${app.link}" class="app-name">${app.nama}</a>
+                        </div>
+                    </div>`;
+  });
+  sectionAplikasi.innerHTML = listAplikasi;
+}
+
 renderSosial();
 renderSkill();
 renderKerja();
 renderFormal();
 renderNonFormal();
+renderAplikasi();
 
 let docTitle = document.title;
 window.addEventListener("blur", () => {
