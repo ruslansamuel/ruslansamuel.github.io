@@ -171,8 +171,13 @@ function renderAplikasi() {
       link: "bmi.html",
     },
     {
+      nama: "Calculator",
+      img: "calculator.png",
+      link: "calculator.html",
+    },
+    {
       nama: "Calendar",
-      img: "clock.png",
+      img: "calendar.png",
       link: "calendar.html",
     },
     {

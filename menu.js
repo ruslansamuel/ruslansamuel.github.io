@@ -16,12 +16,20 @@ const renderMenu = () => {
       link: "../",
     },
     {
-      judul: "Clock & Time",
-      link: "index.html",
-    },
-    {
       judul: "Index Masa Tubuh",
       link: "bmi.html",
+    },
+    {
+      judul: "Calculator",
+      link: "calculator.html",
+    },
+    {
+      judul: "Calendar",
+      link: "calendar.html",
+    },
+    {
+      judul: "Clock & Time",
+      link: "clock.html",
     },
     {
       judul: "Countdown Timer",
