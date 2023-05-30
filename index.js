@@ -166,14 +166,19 @@ function renderNonFormal() {
 function renderAplikasi() {
   let aplikasi = [
     {
-      nama: "Clock & Date",
-      img: "clock.png",
-      link: "clock.html",
-    },
-    {
       nama: "Indeks Masa Tubuh",
       img: "bmi.png",
       link: "bmi.html",
+    },
+    {
+      nama: "Calendar",
+      img: "clock.png",
+      link: "calendar.html",
+    },
+    {
+      nama: "Clock & Date",
+      img: "clock.png",
+      link: "clock.html",
     },
     {
       nama: "Countdown Timer",
