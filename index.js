@@ -168,62 +168,62 @@ function renderAplikasi() {
     {
       nama: "Clock & Date",
       img: "clock.png",
-      link: "app/index.html",
+      link: "clock.html",
     },
     {
       nama: "Indeks Masa Tubuh",
       img: "bmi.png",
-      link: "app/bmi.html",
+      link: "bmi.html",
     },
     {
       nama: "Countdown Timer",
       img: "countdown.png",
-      link: "app/countdown.html",
+      link: "countdown.html",
     },
     {
       nama: "English Dictionary",
       img: "dictionary.png",
-      link: "app/dictionary.html",
+      link: "dictionary.html",
     },
     {
       nama: "Drawing",
       img: "draw.png",
-      link: "app/draw.html",
+      link: "draw.html",
     },
     {
       nama: "Key Code Detector",
       img: "key.png",
-      link: "app/key.html",
+      link: "key.html",
     },
     {
       nama: "To Do List",
       img: "list.png",
-      link: "app/list.html",
+      link: "list.html",
     },
     {
       nama: "Music Player",
       img: "music.png",
-      link: "app/music.html",
+      link: "music.html",
     },
     {
       nama: "Password Generator",
       img: "passwordgenerator.png",
-      link: "app/passwordgenerator.html",
+      link: "passwordgenerator.html",
     },
     {
       nama: "QR Code Generator",
       img: "qrgenerator.png",
-      link: "app/qrgenerator.html",
+      link: "qrgenerator.html",
     },
     {
       nama: "Text To Speech",
       img: "tts.png",
-      link: "app/tts.html",
+      link: "tts.html",
     },
     {
       nama: "Weather",
       img: "weather.png",
-      link: "app/weather.html",
+      link: "weather.html",
     },
   ];
   let listAplikasi = "";
