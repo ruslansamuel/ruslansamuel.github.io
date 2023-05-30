@@ -71,7 +71,7 @@ const renderMenu = () => {
             </button>
             <ul class="menu-button-list">`;
   hal.forEach(function (h) {
-    if ("/app/" + h.link == window.location.pathname) {
+    if ("/" + h.link == window.location.pathname) {
       listMenu += `<li class="menu-button-list-item active">
                           <a href="${h.link}">${h.judul}</a>
                       </li>`;
