@@ -445,6 +445,7 @@ body {
 }
 
 .container .card .section #aplikasi .row .column .app-card {
+    width: fit-content;
     border-radius: 1rem;
     overflow: hidden;
     display: flex;
@@ -459,6 +460,7 @@ body {
 }
 
 .container .card .section #aplikasi .row .column .app-card .app-name {
+    text-align: center;
     margin: 1rem 0;
     font-size: 1.2rem;
     font-weight: bold;
@@ -859,6 +861,33 @@ body {
         padding: 0 2rem 0 0.6rem;
         color: var(--secondary);
         word-wrap: break-word;
+    }
+
+    .container .card .section #aplikasi .row {
+        flex-direction: column;
+    }
+
+    .container .card .section #aplikasi .row .column {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .container .card .section #aplikasi .row .column .app-card {
+        flex-direction: row;
+        justify-content: start;
+    }
+
+    .container .card .section #aplikasi .row .column .app-card .app-img {
+        width: 25%;
+    }
+
+    .container .card .section #aplikasi .row .column .app-card .app-name {
+        text-align: start;
+        margin: 0 1rem;
+    }
+
+    .container .card .section #aplikasi .row .column .app-card .app-name:hover {
+        color: var(--secondary);
     }
 
     .container .card .section #lokasi .section-text {
