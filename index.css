@@ -179,6 +179,7 @@ body {
     font-size: 0.83rem;
     margin: 0.5rem auto;
     transition: 0.3s ease-in-out;
+    cursor: default;
 }
 
 .container .card .profil .profil-sosial {
@@ -257,26 +258,6 @@ body {
     flex-direction: column;
     width: 100%;
     height: 100%;
-}
-
-.container .card .section #beranda .hero-caption,
-.container .card .section #beranda .hero-text {
-    display: block;
-    text-align: center;
-}
-
-.container .card .section #beranda .hero-caption::after {
-    font-size: 2.5rem;
-    content: "";
-    animation: textChange 6s linear;
-}
-
-.container .card .section #beranda .hero-text {
-    font-size: 3rem;
-    animation: zoom 1.5s alternate-reverse infinite;
-    animation-delay: 6s;
-    color: var(--light);
-    font-weight: bold;
 }
 
 .container .card .section #kontak {
