@@ -217,37 +217,45 @@ function renderNonFormal() {
       waktu: "September 2021",
       sekolah: "Seleksi Kompetensi Dasar",
       instansi: "BKN RI",
+      img: "SKD BKN 2021.jpg",
     },
     {
       waktu: "April 2021",
       sekolah: "Kuasai Tekhnik Produksi Audio Digital untuk Pemula",
       instansi: "Skill Academy By Ruang Guru",
+      img: "COE03.jpg",
     },
     {
       waktu: "April 2021",
       sekolah: "Data Statistika dan Data Science",
       instansi: "Skill Academy By Ruang Guru",
+      img: "COE02.jpg",
     },
     {
       waktu: "April 2021",
       sekolah: "SEO 101 : Cara Membuat Website Eksis di Halaman Depan Google",
       instansi: "Skill Academy By Ruang Guru",
+      img: "COE01.jpg",
     },
     {
       waktu: "2011",
       sekolah: "Pelatihan Komputer dan Internet",
       instansi: "Universitas Negeri Gorontalo",
+      img: "Komputer.png",
     },
   ];
   let listNonFormal = "";
   nonformal.forEach((nf) => {
     listNonFormal += `<div class="list-pendidikan">
-                    <span class="waktu">${nf.waktu}</span>
-                    <div class="deskripsi">
-                        <span class="sekolah">${nf.sekolah}</span>
-                        <span class="instansi">${nf.instansi}</span>
-                    </div>
-                </div>`;
+                          <span class="waktu">${nf.waktu}</span>
+                          <div class="deskripsi">
+                              <span class="sekolah">${nf.sekolah}</span>
+                              <span class="instansi">${nf.instansi}</span>
+                          </div>`;
+    if (nf.img != "") {
+      listNonFormal += `<img src="assets/images/sertifikat/${nf.img}" alt="${nf.sekolah}">`;
+    }
+    listNonFormal += `</div>`;
   });
   sectionNonFormal.innerHTML = listNonFormal;
 }

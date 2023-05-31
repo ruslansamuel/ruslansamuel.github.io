@@ -436,11 +436,13 @@ body {
     word-wrap: break-word;
 }
 
-.container .card .section #tentang .row .column .section-item.kerja .list-kerja {
+.container .card .section #tentang .row .column .section-item.kerja .list-kerja,
+.container .card .section #pendidikan .row .column .section-item.nonformal .list-pendidikan {
     position: relative;
 }
 
-.container .card .section #tentang .row .column .section-item.kerja .list-kerja:hover .rincian {
+.container .card .section #tentang .row .column .section-item.kerja .list-kerja:hover .rincian,
+.container .card .section #pendidikan .row .column .section-item.nonformal .list-pendidikan:hover img {
     visibility: visible;
 }
 
@@ -451,7 +453,8 @@ body {
     position: absolute;
     box-shadow: 0px 0px 8px 0px var(--dark);
     padding: 1rem 1rem 0 1rem;
-    margin-top: 0.5rem;
+    top: -5;
+    left: -105%;
     border-radius: 1rem;
     color: var(--primary);
     z-index: 999;
@@ -459,6 +462,17 @@ body {
 
 .container .card .section #tentang .row .column .section-item.kerja .list-kerja .rincian .rincian-list {
     padding: 0 0 1rem 0;
+}
+
+.container .card .section #pendidikan .row .column .section-item.nonformal .list-pendidikan img {
+    width: 100%;
+    visibility: hidden;
+    position: absolute;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 8px 0px var(--dark);
+    top: -5;
+    left: -105%;
+    z-index: 999;
 }
 
 .container .card .section #project .row {
