@@ -959,7 +959,6 @@ body {
     }
 
     .container .sidebar {
-        width: 50%;
         margin-top: 1.5rem;
         display: flex;
         justify-content: space-around;
