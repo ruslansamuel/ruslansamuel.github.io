@@ -1,6 +1,7 @@
 // SKILL
 var profilSosial = document.querySelector(".profil-sosial");
 var sectionSkill = document.querySelector(".skill");
+var sectionSertifikat = document.querySelector(".sertifikat");
 var sectionKerja = document.querySelector(".kerja");
 var sectionFormal = document.querySelector(".formal");
 var sectionNonFormal = document.querySelector(".nonformal");
@@ -16,6 +17,10 @@ function renderSosial() {
     {
       app: "instagram",
       username: "rusland_s",
+    },
+    {
+      app: "youtube",
+      username: "channel/UCXkPQinNTa5H5gf0tOjlRSg",
     },
     {
       app: "tiktok",
@@ -49,6 +54,46 @@ function renderSkill() {
     badgeSkill += `<span class="badge">#${skill[s]}</span>`;
   }
   sectionSkill.innerHTML = badgeSkill;
+}
+
+function renderSertifikat() {
+  let sertifikat = [
+    {
+      img: "Komputer.png",
+      title: "Pelatihan Komputer dan Internet",
+      penerbit: "Universitas Negeri Gorontalo",
+      tanggl: "2011",
+    },
+    {
+      img: "COE01.jpg",
+      title: "SEO 101 : Cara Membuat Website Eksis di Halaman Depan Google",
+      penerbit: "Skill Academy by Ruang Guru",
+      tanggl: "10 April 2021",
+    },
+    {
+      img: "COE02.jpg",
+      title: "Dasar Statistika untuk Data Science",
+      penerbit: "Skill Academy by Ruang Guru",
+      tanggl: "18 April 2021",
+    },
+    {
+      img: "COE03.jpg",
+      title: "Kuasai Teknik Produksi Audio Digital untuk Pemula",
+      penerbit: "Skill Academy by Ruang Guru",
+      tanggl: "02 Mei 2021",
+    },
+    {
+      img: "SKD BKN 2021.jpg",
+      title: "Seleksi Kompetensi Dasar",
+      penerbit: "Badan Kepegawaian Negara RI",
+      tanggl: "05 September 2021",
+    },
+  ];
+  let listSertifikat = "";
+  sertifikat.forEach((srt) => {
+    listSertifikat += `<img src="assets/images/sertifikat/${srt.img}" class="sertifikat-img animate-zoom" alt="${srt.title}">`;
+  });
+  sectionSertifikat.innerHTML = listSertifikat;
 }
 
 function renderKerja() {
@@ -287,6 +332,7 @@ function renderBlog() {
 
 renderSosial();
 renderSkill();
+renderSertifikat();
 renderKerja();
 renderFormal();
 renderNonFormal();
@@ -361,3 +407,25 @@ window.onload = function () {
     ".typewrite > .wrap { border-right: 0.08em solid #fff; font-size: 3rem; color: #543210; cursor: default;}";
   document.body.appendChild(css);
 };
+
+var imgSertifikat = document.getElementsByClassName("sertifikat-img");
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  for (let i = 0; i < imgSertifikat.length; i++) {
+    imgSertifikat[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > imgSertifikat.length) {
+    myIndex = 1;
+  }
+  imgSertifikat[myIndex - 1].style.display = "block";
+  setTimeout(carousel, 5000);
+}
+
+for (let s = 0; s < imgSertifikat.length; s++) {
+  imgSertifikat[s].addEventListener("click", (srt) => {
+    window.open(srt.target.currentSrc, "_blank");
+  });
+}

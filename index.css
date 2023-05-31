@@ -352,6 +352,26 @@ body {
     box-shadow: 0px 0px 0px 3px var(--secondary);
 }
 
+.container .card .section #tentang .row .column .section-item.sertifikat {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.container .card .section #tentang .row .column .section-item.sertifikat .sertifikat-img {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 8px 1px var(--dark);
+    cursor: pointer;
+}
+
 .container .card .section #tentang .row .column .section-item.kerja,
 .container .card .section #pendidikan .row .column .section-item.formal,
 .container .card .section #pendidikan .row .column .section-item.nonformal {
@@ -645,6 +665,7 @@ body {
 
 .container .card .section #kontak .form-contact .btn:hover {
     background-color: var(--dark);
+    box-shadow: 0px 0px 0px 4px var(--secondary);
 }
 
 .container .card .section #kontak .form-contact .btn i {
@@ -700,6 +721,44 @@ body {
     transform: scale(1.3);
 }
 
+/* ANIMATION */
+.animate-spin {
+    animation: spin 2s infinite linear;
+}
+
+.animate-fading {
+    background-color: var(--secondary);
+    animation: fading 5s infinite;
+}
+
+.animate-opacity {
+    animation: opac 5s;
+}
+
+.animate-top {
+    position: relative;
+    animation: animatetop 5s;
+}
+
+.animate-left {
+    position: relative;
+    animation: animateleft 5s;
+}
+
+.animate-right {
+    position: relative;
+    animation: animateright 5s;
+}
+
+.animate-bottom {
+    position: relative;
+    animation: animatebottom 5s;
+}
+
+.animate-zoom {
+    animation: animatezoom 5s infinite;
+}
+
 @keyframes textChange {
     0% {
         content: "Welcome to";
@@ -723,6 +782,95 @@ body {
         content: "RUSLAN SAMUEL";
         scale: 1.5;
         color: var(--dark);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(359deg);
+    }
+}
+
+@keyframes fading {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes opac {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes animateleft {
+    from {
+        left: -300px;
+        opacity: 0;
+    }
+    to {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes animateright {
+    from {
+        right :-300px;
+        opacity :0
+    }
+    to {
+        right :0;
+        opacity:1;
+    }
+}
+
+@keyframes animatebottom {
+    from {
+        bottom: -300px;
+        opacity: 0;
+    }
+    to {
+        bottom: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes animatezoom {
+    0% {
+        transform: scale(0);
+    }
+    25% {
+        transform: scale(1)
+    }
+    90% {
+        transform: scale(1)
+    }
+    100% {
+        transform: scale(0);
     }
 }
 
