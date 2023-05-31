@@ -4,7 +4,8 @@ var sectionSkill = document.querySelector(".skill");
 var sectionKerja = document.querySelector(".kerja");
 var sectionFormal = document.querySelector(".formal");
 var sectionNonFormal = document.querySelector(".nonformal");
-var sectionAplikasi = document.querySelector("#aplikasi .row");
+var sectionAplikasi = document.querySelector("#project .row");
+var sectionBlog = document.querySelector("#blog .list-blog");
 
 function renderSosial() {
   let sosial = [
@@ -248,12 +249,49 @@ function renderAplikasi() {
   sectionAplikasi.innerHTML = listAplikasi;
 }
 
+function renderBlog() {
+  let blog = [
+    // {
+    //   title: "Blog Title",
+    //   img: "blog.png",
+    //   author: "Author",
+    //   date: "Rabu, 31 Mei 2023",
+    //   time: "00:00:00",
+    //   like: 0,
+    //   view: 0,
+    //   content:
+    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni voluptatibus tempore odit qui corporis ea quo incidunt magnam commodi eius quos libero id, alias rem explicabo aliquid autem odio, necessitatibus at voluptate reprehenderit perferendis! Praesentium optio, labore nulla iste aspernatur exercitationem esse id, iusto assumenda voluptatum incidunt? Facilis sit consectetur ipsum eos deserunt dignissimos nam, necessitatibus aliquam porro, laboriosam quae molestiae amet molestias excepturi fugit rem saepe temporibus harum non eum et suscipit. Beatae, est deserunt qui et quam voluptatum aut impedit nostrum. Voluptas tempore corrupti commodi impedit nisi officiis obcaecati reiciendis repudiandae eius iusto, mollitia voluptatum. Quia, exercitationem doloremque.",
+    // },
+  ];
+  let listBlog = "";
+  blog.forEach((bl) => {
+    listBlog += `<div class="card-blog">
+                    <div class="card-blog-img">
+                        <img src="assets/images/blog/${bl.img}" alt="Blog Image">
+                    </div>
+                    <div class="card-blog-body">
+                        <a href="" class="blog-title">${bl.title}</a>
+                        <div class="blog-data">
+                            <span class="blog-author"><i class="bi bi-person-fill"></i>${bl.author}</span>
+                            <span class="blog-date"><i class="bi bi-calendar-check-fill"></i>${bl.date}</span>
+                            <span class="blog-time"><i class="bi bi-clock-fill"></i>${bl.time}</span>
+                            <span class="blog-likes"><i class="bi bi-heart-fill"></i>${bl.like}</span>
+                            <span class="blog-views"><i class="bi bi-eye-fill"></i>${bl.view}</span>
+                        </div>
+                        <p class="blog-text">${bl.content}</p>
+                    </div>
+                </div>`;
+  });
+  sectionBlog.innerHTML = listBlog;
+}
+
 renderSosial();
 renderSkill();
 renderKerja();
 renderFormal();
 renderNonFormal();
 renderAplikasi();
+renderBlog();
 
 let docTitle = document.title;
 window.addEventListener("blur", () => {
