@@ -352,26 +352,6 @@ body {
     box-shadow: 0px 0px 0px 3px var(--secondary);
 }
 
-.container .card .section #tentang .row .column .section-item.sertifikat {
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-top: 1rem;
-}
-
-.container .card .section #tentang .row .column .section-item.sertifikat .sertifikat-img {
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    overflow: hidden;
-    margin-top: 1.5rem;
-    border-radius: 1rem;
-    box-shadow: 0px 0px 8px 1px var(--dark);
-    cursor: pointer;
-}
-
 .container .card .section #tentang .row .column .section-item.kerja,
 .container .card .section #pendidikan .row .column .section-item.formal,
 .container .card .section #pendidikan .row .column .section-item.nonformal {
@@ -386,7 +366,7 @@ body {
 .container .card .section #pendidikan .row .column .section-item.nonformal .list-pendidikan {
     font-size: 0.8rem;
     transition: 0.3s ease-in-out;
-    cursor: default;
+    cursor: pointer;
 }
 
 .container .card .section #tentang .row .column .section-item.kerja .list-kerja .waktu,
