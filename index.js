@@ -102,26 +102,62 @@ function renderKerja() {
       waktu: "Feb - Agst 2022",
       jabatan: "Field Assets Management → Account Verificator",
       instansi: "PT. BFI Finance Indonesia Tbk. Cabang Gorontalo",
+      deskripsi: [
+        "- FIELD ASSET MANAGEMENT -",
+        "Melakukan penagihan kepada nasabah yang menunggak angsuran lebih dari 1 - 90 hari",
+        "Melakukan negosiasi dan pencarian solusi kepada nasabah yang gagal bayar angsuran",
+        "Mengamankan aset agunan yang dikuasai oleh nasabah yang gagal bayar",
+        "- ACCOUNT VERIFICATOR -",
+        "Melakukan verifikasi data dan informasi calon debitur",
+        "Memastikan calon debitur memenuhi syarat untuk mendapatkan bantuan dana dari perusahaan",
+        "Memastikan data calon debitur terinput dengan baik sesuai form yang berlaku",
+        "Melakukan follow up kepada nasabah yang ingin melakukan pengajuan pinjaman dana kembali",
+      ],
     },
     {
       waktu: "Jan 2018 - Feb 2021",
       jabatan: "Staf Program → Admin Server LPSE",
       instansi: "Biro Pengadaan Setda Provinsi Gorontalo",
+      deskripsi: [
+        "- STAF PROGRAM -",
+        "Menginput data program dan kegiatan kantor",
+        "Menginput data kinerja program dan kegiatan kantor",
+        "Memberikan masukkan berdasarkan evaluasi kinerja program dan kegiatan kantor",
+        "- ADMIN SERVER LPSE -",
+        "Menjaga aktifitas server agar berjalan dengan baik",
+        "Memastikan segala jenis pengadaan barang dan jasa pemerintah Provinsi Gorontalo berjalan dengan lancar",
+        "Membangun dan mengembangkan aplikasi pengadaan",
+      ],
     },
     {
       waktu: "Jan 2014 - Des 2017",
       jabatan: "Staf Entri EMONEV & Pembantu Bendahara Pengeluaran",
       instansi: "Biro PP & Kesra Setda Provinsi Gorontalo",
+      deskripsi: [
+        "Menginput data program dan kegiatan kantor",
+        "Menginput data kinerja program dan kegiatan kantor",
+        "Memberikan masukkan berdasarkan evaluasi kinerja program dan kegiatan kantor",
+        "Membantu Bendahara Pengeluaran dalam mengadministrasi dan pengelolaan keuangan kantor",
+      ],
     },
     {
       waktu: "Mar - Sept 2013",
       jabatan: "Mantri Penagihan",
       instansi: "Koperasi Simpan Pinjam Karya Bersama",
+      deskripsi: [
+        "Mencari calon nasabah yang memerlukan dana untuk modal usahanya",
+        "Melakukan verifikasi kelayakan calon nasabah yang ingin mengajukan pinjaman dana koperasi",
+        "Melakukan penagihan kepada nasabah yang meminjam dana dari koperasi",
+      ],
     },
     {
       waktu: "Mar - Agst 2012",
       jabatan: "Operator",
       instansi: "Fotocopy PURNAMA",
+      deskripsi: [
+        "Melayani konsumen yang ingin melakukan fotocopy dokumen",
+        "Memastikan ketersediaan alat dan bahan untuk usaha",
+      ],
     },
   ];
   let listKerja = "";
@@ -131,8 +167,15 @@ function renderKerja() {
                     <div class="deskripsi">
                         <span class="jabatan">${k.jabatan}</span>
                         <span class="instansi">${k.instansi}</span>
-                    </div>
-                </div>`;
+                    </div>`;
+    if (k.deskripsi.length > 0) {
+      listKerja += `<ul class="rincian">`;
+      for (let i = 0; i < k.deskripsi.length; i++) {
+        listKerja += `<li class="rincian-list">${k.deskripsi[i]}</li>`;
+      }
+      listKerja += `</ul>`;
+    }
+    listKerja += `</div>`;
   });
   sectionKerja.innerHTML = listKerja;
 }

@@ -386,6 +386,7 @@ body {
 .container .card .section #pendidikan .row .column .section-item.nonformal .list-pendidikan {
     font-size: 0.8rem;
     transition: 0.3s ease-in-out;
+    cursor: default;
 }
 
 .container .card .section #tentang .row .column .section-item.kerja .list-kerja .waktu,
@@ -433,6 +434,31 @@ body {
     padding: 0 0.3rem;
     color: var(--secondary);
     word-wrap: break-word;
+}
+
+.container .card .section #tentang .row .column .section-item.kerja .list-kerja {
+    position: relative;
+}
+
+.container .card .section #tentang .row .column .section-item.kerja .list-kerja:hover .rincian {
+    visibility: visible;
+}
+
+.container .card .section #tentang .row .column .section-item.kerja .list-kerja .rincian {
+    width: 100%;
+    background-color: var(--light);
+    visibility: hidden;
+    position: absolute;
+    box-shadow: 0px 0px 8px 0px var(--dark);
+    padding: 1rem 1rem 0 1rem;
+    margin-top: 0.5rem;
+    border-radius: 1rem;
+    color: var(--primary);
+    z-index: 999;
+}
+
+.container .card .section #tentang .row .column .section-item.kerja .list-kerja .rincian .rincian-list {
+    padding: 0 0 1rem 0;
 }
 
 .container .card .section #project .row {
