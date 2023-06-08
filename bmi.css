@@ -1,12 +1,29 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 .form {
-    background-color: #fff;
-    width: 470px;
-    border-radius: 20px;
-    margin: 20px auto 20px auto;
-    display: block;
-    border: 1px solid #289df6;
-    box-shadow: 0 0 40px 0 #ddd;
+    background: linear-gradient(165deg, var(--secondary), var(--dark));
+    width: 500px;
     justify-content: center;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4),
+                -4px -4px 8px rgba(255,255,255, 0.2),
+                inset -4px -4px 4px rgba(0, 0, 0, 0.4),
+                inset 4px 4px 4px rgba(255,255,255, 0.2);
 }
 
 /* .form:hover {
@@ -24,14 +41,19 @@
 }
 
 .text-input {
+    color: var(--light);
+    text-align: center;
+    font-weight: bold;
     width: 60px;
     height: 30px;
     border-radius: 10px;
-    background-color: #c6dcec;
+    background: linear-gradient(165deg, var(--dark), var(--secondary));
     border: none;
     outline: none;
     padding: 5px 10px;
     cursor: pointer;
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.4),
+                inset -2px -2px 4px rgba(255,255,255, 0.2);
 }
 
 .text-input:last-child {
@@ -39,8 +61,19 @@
 }
 
 .text-input:hover {
-    background-color: #cbe7fd;
-    border: 2px solid #83bbe2;
+    background-color: var(--primary);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4),
+                -2px -2px 4px rgba(255,255,255, 0.2),
+                inset 2px 2px 4px rgba(0, 0, 0, 0.4),
+                inset -2px -2px 4px rgba(255,255,255, 0.2);
+}
+
+.text-input:focus {
+    background-color: var(--primary);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4),
+                -2px -2px 4px rgba(255,255,255, 0.2),
+                inset 2px 2px 4px rgba(0, 0, 0, 0.4),
+                inset -2px -2px 4px rgba(255,255,255, 0.2);
 }
 
 #submit {
@@ -48,22 +81,30 @@
     border-radius: 10px;
     height: 40px;
     width: 140px;
-    background-color: #289df6;
-    color: #fff;
+    background: linear-gradient(165deg, var(--secondary), var(--dark));
+    color: var(--light);
+    font-weight: bold;
     margin: 2rem auto 0;
     display: block;
     outline: none;
     cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4),
+                -2px -2px 4px rgba(255,255,255, 0.2),
+                inset -2px -2px 2px rgba(0, 0, 0, 0.4),
+                inset 2px 2px 2px rgba(255,255,255, 0.2);
 }
 
 #submit:hover {
-    background-color: #0a8ef2;
+    color: var(--grey);
+    background: linear-gradient(165deg, var(--dark), var(--secondary));
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.4),
+                inset -2px -2px 4px rgba(255,255,255, 0.2);
 }
 
 .text {
     display: inline-block;
     margin: 5px 20px 5px 8px;
-
+    color: var(--grey);
 }
 
 .container {
@@ -81,22 +122,33 @@
 
 .checkmark {
     position: absolute;
-    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 3;
     left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #c6dcec;
+    height: 30px;
+    width: 30px;
+    background: linear-gradient(165deg, var(--dark), var(--secondary));
     border-radius: 50px;
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.4),
+                inset -2px -2px 4px rgba(255,255,255, 0.2);
 }
 
 .container:hover input ~ .checkmark {
-    background-color: #cbe7fd;
-    border: 2px solid #83bbe2;
+    background: linear-gradient(165deg, var(--secondary), var(--dark));
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4),
+                -2px -2px 4px rgba(255,255,255, 0.2),
+                inset -1px -1px 2px rgba(0, 0, 0, 0.4),
+                inset 1px 1px 2px rgba(255,255,255, 0.2);
 }
 
 .container input:checked ~ .checkmark {
-    background-color: #289df6;
-    border: 2px solid #83bbe2;
+    background: linear-gradient(165deg, var(--secondary), var(--dark));
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4),
+                -2px -2px 4px rgba(255,255,255, 0.2),
+                inset -1px -1px 2px rgba(0, 0, 0, 0.4),
+                inset 1px 1px 2px rgba(255,255,255, 0.2);
 }
 
 .h3 {
@@ -104,12 +156,13 @@
     font-weight: 500;
     text-align: center;
     padding: 15px;
+    color: var(--grey);
 }
 
 .h3 b {
     font-size: 32px;
     font-weight: 700;
-    color: #289df6;
+    color: var(--light);
 }
 
 .checkmark:after {
@@ -123,11 +176,10 @@
 }
 
 .container .checkmark:after {
-    left: 9px;
-    top: 5px;
+    top: 7;
     width: 5px;
     height: 10px;
-    border: solid white;
+    border: solid var(--light);
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
 }

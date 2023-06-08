@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 
+:root {
+    --primary: #654321;
+    --secondary: #765432;
+    --dark: #543210;
+    --light: #f0f8ff;
+    --grey: #aaaaaa;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -20,6 +28,28 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background-color: var(--primary);
+}
+
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--grey);
+    opacity: 0.5; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: var(--grey);
+    opacity: 0.5; /* Firefox */
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: var(--grey);
+    opacity: 0.5; /* Firefox */
 }
 
 ::-webkit-scrollbar {
@@ -83,16 +113,17 @@ body {
 }
 
 .menu-button {
-    color: #fff;
-    background-color: #5c67ff;
-    box-shadow: 0px 0px 4px 4px rgba(92, 103, 255, 0.3);
+    color: var(--light);
+    background: linear-gradient(145deg, var(--secondary), var(--dark));
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.4),
+                -4px -4px 8px rgba(255,255,255,0.2);
     border: none;
     border-radius: 50%;
     width: 50px;
     height: 50px;
     padding: 0;
     cursor: pointer;
-    transition: 0.2s ease-in;
+    transition: 0.1s ease-in;
     display: grid;
     place-items: center;
     position: absolute;
@@ -103,12 +134,11 @@ body {
 
 .menu-button:hover,
 .menu-button:focus {
-    box-shadow: 0px 0px 4px 8px rgba(92, 103, 255, 0.3);
-    background-color: #4854ff;
+    background: linear-gradient(145deg, var(--dark), var(--secondary));
 }
 
-.menu-button:focus {
-    outline: 0;
+.menu-button:hover .menu-icon-wrapper {
+    transform: rotate(45deg);
 }
 
 .menu-icon-wrapper {
@@ -127,6 +157,10 @@ body {
 .list-container.active .menu-button-list {
     opacity: 1;
     transform: scale(1);
+    background-color: var(--primary);
+    background: linear-gradient(145deg, var(--secondary), var(--dark));
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.4),
+                -4px -4px 8px rgba(255,255,255,0.2);
 }
 
 .list-container.active .menu-button {
@@ -134,11 +168,11 @@ body {
 }
 
 .list-container.active .menu-icon-wrapper {
-    transform: rotate(-90deg);
+    transform: rotate(90deg);
 }
 
 .menu-button-list {
-    background-color: #fff;
+    background-color: var(--light);
     border-radius: 8px;
     list-style-type: none;
     box-shadow: 0px 0px 4px 4px rgba(150, 157, 249, 0.3);
@@ -164,7 +198,7 @@ body {
     width: 100%;
     display: flex;
     align-items: center;
-    color: #1c3991;
+    color: var(--grey);
     padding: 5px 10px;
     border-radius: 4px;
     cursor: pointer;
@@ -178,17 +212,13 @@ body {
     text-transform: uppercase;
 }
 
-.menu-button-list-item:hover {
-    color: #5c67ff;
-}
-
 .menu-button-list-item:after {
     content: "";
     position: absolute;
     height: 1px;
     width: 100%;
     bottom: 0;
-    background-color: rgba(28, 57, 145, 0.2);
+    background-color: var(--secondary);
 }
 
 .menu-button-list-item:last-child:after {
@@ -201,11 +231,23 @@ body {
 }
 
 .menu-button-list-item a {
+    color: var(--grey);
     display: block;
     line-height: 20px;
     font-size: 14px;
     margin-left: 8px;
     text-decoration: none;
+    transition: 0.2s ease-in;
+}
+
+.menu-button-list-item a:hover {
+    font-weight: bold;
+    padding-left: 0.5rem;
+    color: var(--light);
+}
+
+.menu-button-list-item.active a {
+    color: var(--light);
 }
 
 @keyframes onePulse {

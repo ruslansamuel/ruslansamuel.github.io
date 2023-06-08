@@ -1,11 +1,14 @@
 .wrapper {
+    color: var(--light);
     position: absolute;
     width: 600px;
     padding: 25px;
-    border-radius: 8px;
-    background-color: lightcyan;
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.3),
-        -5px -5px 10px rgba(255,255,255,0.3);
+    border-radius: 0.5rem;
+    background: linear-gradient(145deg, var(--secondary), var(--dark));
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.4),
+                -4px -4px 8px rgba(255,255,255,0.2),
+                inset -4px -4px 4px rgba(0,0,0,0.4),
+                inset 4px 4px 4px rgba(255,255,255,0.2);
 }
 
 .wrapper header {
@@ -36,54 +39,51 @@
     width: 100%;
     outline: none;
     border: none;
-    border-radius: 8px;
-    background-color: lightcyan;
+    border-radius: 0.5rem;
 }
 
 .wrapper .form .row textarea {
+    color: var(--light);
     resize: none;
     height: 110px;
     font-size: 15px;
     padding: 8px 10px;
-    box-shadow: inset -5px -5px 10px rgba(255,255,255,0.8),
-        inset 5px 5px 10px rgba(0,0,0,0.3),
-        -5px -5px 10px rgba(255,255,255,0.8),
-        5px 5px 10px rgba(0,0,0,0.3);
+    border-radius: 0.5rem;
+    background: linear-gradient(145deg, var(--secondary), var(--dark));
+    box-shadow: inset 4px 4px 4px rgba(0,0,0,0.4),
+    inset -4px -4px 4px rgba(255,255,255,0.2);
 }
 
-.wrapper .form .row .outer {
+.wrapper .form .row select {
+    color: var(--light);
     height: 48px;
     display: flex;
     padding: 0 10px;
     align-items: center;
-    border-radius: 5px;
+    border-radius: 0.5rem;
     justify-content: center;
-    box-shadow: inset -5px -5px 10px rgba(255,255,255,0.8),
-        inset 5px 5px 10px rgba(0,0,0,0.3),
-        -5px -5px 10px rgba(255,255,255,0.8),
-        5px 5px 10px rgba(0,0,0,0.3);
+    background: linear-gradient(145deg, var(--secondary), var(--dark));
+    background-color: var(--primary);
+    box-shadow: inset 4px 4px 4px rgba(0,0,0,0.4),
+    inset -4px -4px 4px rgba(255,255,255,0.2);
 }
 
-.wrapper .form .row .outer select {
-    font-size: 15px;
-    background: none;
-}
-
-.wrapper .form .row .outer select::-webkit-scrollbar {
+.wrapper .form .row select::-webkit-scrollbar {
     width: 8px;
 }
 
-.wrapper .form .row .outer select::-webkit-scrollbar-track {
-    background: #fff;
+.wrapper .form .row select::-webkit-scrollbar-track {
+    background: var(--primary);
 }
 
-.wrapper .form .row .outer select::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 8px;
+.wrapper .form .row select::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 0.5rem;
     border-right: 2px solid #ffffff;
 }
 
 .wrapper .form button {
+    color: var(--light);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -92,17 +92,19 @@
     font-weight: bold;
     cursor: pointer;
     margin-top: 10px;
-    background: lightcyan;
-    transition: 0.3s ease;
-    box-shadow: -5px -5px 10px rgba(255,255,255,0.8),
-        5px 5px 10px rgba(0,0,0,0.3),
-        inset 2px 2px 4px rgba(255,255,255,0.8),
-        inset -2px -2px 4px rgba(0,0,0,0.3);
+    border-radius: 0.5rem;
+    background: linear-gradient(145deg, var(--secondary), var(--dark));
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.4),
+                -4px -4px 8px rgba(255,255,255,0.2),
+                inset -4px -4px 4px rgba(0,0,0,0.4),
+                inset 4px 4px 4px rgba(255,255,255,0.2);
 }
 
 .wrapper .form button:hover {
-    box-shadow: inset -5px -5px 10px rgba(255,255,255,0.8),
-        inset 5px 5px 10px rgba(0,0,0,0.3);
+    background: linear-gradient(145deg, var(--dark), var(--secondary));
+    color: var(--grey);
+    box-shadow: inset 4px 4px 4px rgba(0,0,0,0.4),
+                inset -4px -4px 4px rgba(255,255,255,0.2);
 }
 
 .wrapper .form button i {

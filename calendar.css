@@ -1,8 +1,11 @@
 .wrapper {
     width: 450px;
-    background-color: aliceblue;
+    background: linear-gradient(145deg, var(--secondary), var(--dark));
     border-radius: 10px;
-    box-shadow: 0 15px 40px rgba(0 0 0 / 0.12);
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.4),
+                -4px -4px 8px rgba(255,255,255,0.2),
+                inset -4px -4px 4px rgba(0,0,0,0.4),
+                inset 4px 4px 4px rgba(255,255,255,0.2);
 }
 
 .wrapper header {
@@ -13,8 +16,11 @@
 }
 
 .wrapper header .current-date {
-    color: #9b59b6;
+    color: var(--light);
     font-weight: bold;
+    cursor: default;
+    font-size: 1.45rem;
+    font-weight: 500;
 }
 
 .wrapper header .icons {
@@ -26,8 +32,9 @@
     width: 30px;
     margin: 0 1px;
     cursor: pointer;
-    color: #878787;
-    font-size: 1.9rem;
+    color: var(--grey);
+    font-size: 1.2rem;
+    font-weight: bold;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -35,7 +42,7 @@
 }
 
 .wrapper header .icons span:hover {
-    color: #9b59b6;
+    color: var(--light);
 }
 
 .wrapper header .icons span:last-child {
@@ -43,12 +50,8 @@
 }
 
 .wrapper header .icons span:hover {
-    background: #f2f2f2;
-}
-
-.wrapper header .current-date {
-    font-size: 1.45rem;
-    font-weight: 500;
+    box-shadow: inset 2px 2px 4px rgba(0,0,0,0.4),
+                inset -2px -2px 4px rgba(255,255,255,0.2);
 }
 
 .wrapper .calendar {
@@ -67,7 +70,7 @@
 }
 
 .wrapper .calendar li {
-    color: #333;
+    color: var(--light);
     width: calc(100%/7);
     font-size: 1.07rem;
 }
@@ -89,11 +92,14 @@
 }
 
 .wrapper .calendar .days li.inactive {
-    color: #aaa;
+    color: var(--grey);
+    transform: scale(0.7);
 }
 
 .wrapper .calendar .days li.active {
-    color: #fff;
+    color: var(--light);
+    transform: scale(1.2);
+    font-weight: bold;
 }
 
 .wrapper .calendar .days li::before {
@@ -109,9 +115,11 @@
 }
 
 .wrapper .calendar .days li.active::before {
-    background: #9b59b6;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.4),
+                -2px -2px 4px rgba(255,255,255,0.2);
 }
 
 .wrapper .calendar .days li:not(.active):hover::before {
-    background: #9b59b6;
+    box-shadow: inset 2px 2px 4px rgba(0,0,0,0.4),
+                inset -2px -2px 4px rgba(255,255,255,0.2);
 }

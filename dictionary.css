@@ -1,10 +1,13 @@
 .container {
+    color: var(--light);
     position: relative;
-    background-color: rgba(255,255,255,0.3);
+    background: linear-gradient(165deg, var(--secondary), var(--dark));
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.2),
-                -5px -5px 10px rgba(255,255,255,0.2);
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.4),
+                -4px -4px 8px rgba(255,255,255,0.2),
+                inset -4px -4px 4px rgba(0,0,0,0.4),
+                inset 4px 4px 4px rgba(255,255,255,0.2);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,17 +25,36 @@
 }
 
 .input {
+    color: var(--light);
     width: 350px;
     padding: 10px 20px;
     font-size: 16px;
     margin: 5px 0 15px 0;
-    border: 2px solid rgba(255,255,255,0.4);
-    border-radius: 5px;
-    background-color: rgba(255,255,255,0.6);
+    border-radius: 0.5rem;
+    background: linear-gradient(165deg, var(--secondary), var(--dark));
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.4),
+                -2px -2px 4px rgba(255,255,255,0.15),
+                inset -2px -2px 3px rgba(0,0,0,0.4),
+                inset 2px 2px 3px rgba(255,255,255,0.15);
     outline: none;
 }
 
+.input:hover {
+    background: linear-gradient(165deg, var(--dark), var(--secondary));
+    box-shadow: inset 4px 4px 8px rgba(0,0,0,0.4),
+    inset -4px -4px 8px rgba(255,255,255,0.15);
+}
+
+.input:focus {
+    background: linear-gradient(165deg, var(--dark), var(--secondary));
+    box-shadow: inset 4px 4px 8px rgba(0,0,0,0.4),
+                inset -4px -4px 8px rgba(255,255,255,0.15);
+}
+
 .info-text {
+    font-size: 0.8rem;
+    color: var(--grey);
+    font-style: italic;
     margin: 5px 0 10px 0;
 }
 
@@ -49,10 +71,11 @@
 }
 
 .meaning-container .meaning {
+    color: var(--grey);
     font-weight: 200;
 }
 
-.audio {
+.audio{
     margin: 10px 0;
-    border-radius: 20px;
+    border-radius: 100px;
 }

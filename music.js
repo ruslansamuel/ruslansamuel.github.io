@@ -76,8 +76,8 @@ const updatePlayer = () => {
 const list = () => {
     let datalist = '';
     musics.forEach(function(m){
-        datalist += `<div class="card d-flex justify-content-between align-items-center">
-                        <span class="fw-bold text-uppercase song-title">${m.name}</span>
+        datalist += `<div class="card">
+                        <span class="song-title">${m.name}</span>
                         <span class="text-muted">${m.author}</span>
                     </div>`;
     });

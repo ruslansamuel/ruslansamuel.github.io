@@ -3,18 +3,20 @@
     position: absolute;
     width: 480px;
     padding: 24px;
-    background: lightcyan;
+    background: linear-gradient(165deg, var(--secondary), var(--dark));
     border-radius: 15px;
     display: flex;
     align-items: center;
-    border: 5px solid rgba(190,190,190,0);
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.3),
-                -5px -5px 10px rgba(255,255,255,0.6);
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.4),
+                -4px -4px 8px rgba(255,255,255,0.2),
+                inset -4px -4px 4px rgba(0,0,0,0.4),
+                inset 4px 4px 4px rgba(255,255,255,0.2);
     flex-direction: column;
 }
 
 .input {
-    background: lightcyan;
+    color: var(--light);
+    background: linear-gradient(165deg, var(--secondary), var(--dark));
     font-size: 16px;
     font-weight: bold;
     padding: 12px 20px;
@@ -22,45 +24,46 @@
     margin-bottom: 20px;
     border: none;
     outline: none;
-    border-radius: 5px;
-    box-shadow: inset 5px 5px 10px rgba(0,0,0,0.3),
-                inset -5px -5px 10px rgba(255,255,255,0.6),
-                5px 5px 10px rgba(0,0,0,0.3),
-                -5px -5px 10px rgba(255,255,255,0.6);
+    border-radius: 0.5rem;
+    box-shadow: inset 4px 4px 4px rgba(0,0,0,0.4),
+                inset -4px -4px 4px rgba(255,255,255,0.2);
 }
 
 .container button {
+    cursor: pointer;
+    color: var(--light);
     width: 100%;
-    border-radius: 5px;
+    border-radius: 0.5rem;
     padding: 12px 20px;
     border: 0;
-    background: lightcyan;
+    background: linear-gradient(165deg, var(--secondary), var(--dark));
     text-transform: uppercase;
     font-weight: 900;
     letter-spacing: 2px;
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.3),
-                -5px -5px 10px rgba(255,255,255,0.6);
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.4),
+                -4px -4px 8px rgba(255,255,255,0.2),
+                inset -4px -4px 4px rgba(0,0,0,0.4),
+                inset 4px 4px 4px rgba(255,255,255,0.2);
 }
 
 .container button:hover {
-    box-shadow: inset 5px 5px 10px rgba(0,0,0,0.3),
-                inset -5px -5px 10px rgba(255,255,255,0.6);
+    background: linear-gradient(165deg, var(--dark), var(--secondary));
+    color: var(--grey);
+    box-shadow: inset 4px 4px 4px rgba(0,0,0,0.4),
+                inset -4px -4px 4px rgba(255,255,255,0.2);
 }
 
 .container #qr-image {
     display: none;
+    margin-bottom: 20px;
 }
 
 .container #qr-image .error {
-    color: red;
+    color: var(--grey);
     font-size: 14px;
     font-style: italic;
 }
 
 .container #qr-image img {
-    margin-top: 24px;
     width: 100%;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.3),
-                -5px -5px 10px rgba(255,255,255,0.6);
-}
+    box-shadow: 4px 4px 8px rgba(0,0,0,1);

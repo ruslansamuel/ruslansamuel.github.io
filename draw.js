@@ -1,6 +1,7 @@
 let canvas = document.getElementById('canvas');
 canvas.height = window.innerHeight;
 canvas.width = window.innerWidth;
+canvas.style.backgroundColor = "aliceblue";
 
 let ctx = canvas.getContext('2d');
 ctx.lineWidth = 5;

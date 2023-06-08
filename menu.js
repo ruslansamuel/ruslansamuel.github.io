@@ -1,13 +1,13 @@
-const getRandomColor = () => Math.floor(Math.random() * 0xffffff).toString(16);
+// const getRandomColor = () => Math.floor(Math.random() * 0xffffff).toString(16);
 
-const generateGradient = () => {
-  const color1 = getRandomColor();
-  const color2 = getRandomColor();
+// const generateGradient = () => {
+//   const color1 = getRandomColor();
+//   const color2 = getRandomColor();
 
-  document.body.style.background = `linear-gradient(to left top, #${color1}, #${color2}) no-repeat center center fixed`;
-  document.body.style.backgroundSize = "cover";
-};
-generateGradient();
+//   document.body.style.background = `linear-gradient(to left top, #${color1}, #${color2}) no-repeat center center fixed`;
+//   document.body.style.backgroundSize = "cover";
+// };
+// generateGradient();
 
 const renderMenu = () => {
   var hal = [
